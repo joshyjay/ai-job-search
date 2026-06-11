@@ -1,0 +1,123 @@
+\author{Murat Can Karacabey}
+\RequirePackage[dvipsnames]{xcolor}
+\LoadClass[11pt]{article}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{muratcan_cv}[2020/04/15 Muratcan CV Class]
+% REPLACED: \RequirePackage[sfdefault]{noto} - use fontspec instead
+\RequirePackage{etoolbox}
+\RequirePackage{pgffor}
+\RequirePackage{titlesec}
+\RequirePackage{tikz}
+\RequirePackage{fontspec}
+\RequirePackage[left=0.5in,top=0.1in,right=0.5in,bottom=0.1in]{geometry}
+\RequirePackage{hyperref}
+% REPLACED: \RequirePackage{fontawesome} - use text instead
+\RequirePackage{mfirstuc}
+\RequirePackage{ifthen}
+\RequirePackage{lipsum}
+\RequirePackage{array}
+\pagestyle{empty}
+
+\usepackage{comment}
+
+% Set Noto Sans as default font via fontspec
+\setmainfont{Noto Sans}[
+  BoldFont={Noto Sans Bold},
+  ItalicFont={Noto Sans Italic},
+  BoldItalicFont={Noto Sans Bold Italic}
+]
+
+%Setup
+\newcommand*{\setname}[2]{\def\@firstname{#1}\def\@lastname{#2}}
+\newcommand*{\setaddress}[1]{\def\@address{#1}}
+\newcommand*{\setmobile}[1]{\def\@mobile{#1}}
+\newcommand*{\setposition}[1]{\def\@position{#1}}
+\newcommand*{\setmail}[1]{\def\@mail{#1}}
+\newcommand*{\setcitizenship}[1]{\def\@citizenship{#1}}
+\newcommand*{\setthemecolor}[1]{\def\@themecolor{#1}}
+\newcommand*{\setlinkedinaccount}[1]{\def\@linkedinaccount{#1}}
+\newcommand*{\setgithubaccount}[1]{\def\@githubaccount{#1}}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=NavyBlue,
+}
+
+% Header
+\newcommand\headerview{
+\hfill
+\begin{minipage}{0.55\linewidth}
+    \center \name \\[0.05cm] 
+    \contact
+\end{minipage}
+\hfill
+}
+
+% REPLACED fontawesome icons with text - only LinkedIn, no github
+\newcommand{\linkedinview}{\href{\@linkedinaccount}{\footnotesize linkedin}}
+
+\newcommand{\name}{%
+    {\LARGE \color{\@themecolor} \@firstname \ \@lastname}
+}
+
+\newcommand{\contact}{%
+        {\small \@mail \ \cpshalf \@mobile %
+        \\%
+        \linkedinview \\ 
+        }
+}
+
+% Helper commands
+\newcommand\ruleafter[1]{#1~{\color{black!60!\@themecolor}\hrulefill}}
+
+%colorful pipe separator
+\newcommand{\cps}{{\color{\@themecolor} \quad\textbar\quad}}
+\newcommand{\cpshalf}{{\color{\@themecolor} \textbar\hspace{0.2em}}}
+\newcommand{\coloredbullet}{{\color{\@themecolor} \textbullet}}
+
+% Edit section styles
+\titleformat{\section}
+  {\large\bfseries\scshape\raggedright\color{\@themecolor}}
+  {}{0em}
+  {\ruleafter}
+
+\titlespacing*{\section}{-1pt}{-10pt}{0pt}
+
+% Textview commands
+\newcommand{\experience}[2]{%
+  \mbox { \hspace{1em} \scshape \textbf{#1} }%
+}
+
+\newcommand{\datetext}[1]{%
+{\itshape  \footnotesize \mdseries  \color{black} #1 } 
+}
+
+\newcommand{\datetextbold}[1]{%
+{\footnotesize \mdseries  \color{black} \textbf{#1} } 
+}
+
+\newcommand{\datedexperience}[2]{%
+  \begin{small} \mbox { \hspace{1em} \textbf{#1} } \end{small} \hfill \datetextbold{#2}\\[0.01cm]
+}
+
+\newcommand{\explanation}[2]{%
+    \mbox { \hspace{1.2em} \footnotesize \emph{#1}} \hfill \datetext{#2}\\[0.01cm]
+}
+
+\newcommand{\explanationdetail}[1]{%
+    \indent \indent \begin{minipage}{0.87\linewidth} \footnotesize #1 \end{minipage} \\[0.1cm]
+}
+
+\newcommand\createskill[2]{%
+    \textbf{#1} & #2
+}
+
+\newcommand\createskills[1]{%
+\explanationdetail{
+  \begin{tabular}{rl}
+    \makeatletter
+    \@for\thisitem:=#1\do{\thisitem\\[0.1cm]}
+    \makeatother
+    \end{tabular}
+}
+}

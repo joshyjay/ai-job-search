@@ -1,106 +1,89 @@
 # Writing Style Guide
 
-## Critical Rules
+This supersedes the stock guide. It encodes a tested voice. Do not soften it
+toward generic cover-letter advice. In particular, cover letters are PROSE, not
+bullets, and never carry subheadings.
 
-1. **NO em-dashes (--).**  Use commas, periods, or restructure the sentence instead.
-2. **NO cliches or filler phrases.** Cut: "I am passionate about", "I believe I would be a great fit", "leverage my skills", "hit the ground running", "drive results", "synergies".
-3. **NO generic buzzwords** without concrete backing. Every claim must be supported by a specific example or fact.
-4. **NO apologetic or overly humble language.** Not "I think I could contribute" but "I bring X, demonstrated by Y."
-5. **NO unverified company claims.** Every company-specific statement in a cover letter (partnerships, product names, technology descriptions, expansions) must be independently verified via WebFetch or WebSearch before inclusion. Do not trust reviewer agent research at face value. If a claim cannot be verified, rephrase it in general terms or omit it.
-6. **Reframe emphasis, not substance.** Some framing of experience toward the target role is expected. But apply the **interview backtrack test**: could the candidate comfortably explain this bullet in an interview without backtracking? If they'd have to say "well, what I actually meant was..." then it's too far. Specifically:
-   - **OK:** Reordering experience to lead with what's most relevant; using natural synonyms for the target domain; emphasizing one aspect of a broad role.
-   - **Flag it:** Combining academic + industry experience into a single claim that implies it was all industry; describing work using the posting's specific terminology when the actual work was adjacent but not the same.
-   - **Never:** Claiming experience the candidate doesn't have; implying they worked in a domain they haven't.
-   When a bullet falls in the "flag it" zone, present it to the user after drafting with: "This bullet is a stretch because X. Keep, soften, or drop?" If the evaluation experience match score is below 50, warn before proceeding to drafting that extensive reframing would be needed.
+## Hard voice rules (apply to CV and cover letter)
+
+1. No colons in body text or headings.
+2. No em dashes, and no hyphens used as separators. Use commas or restructure.
+3. No tricolons or serial lists in prose. Maximum two items joined by "and".
+   The only permitted three-part constructions are the country and discipline
+   career arc (Ghana, Egypt, Denmark) and the standard close
+   (location, availability, openness).
+4. No "but" pivots, no negative to positive structures ("not X, it is Y",
+   "although X, I").
+5. No self-promotional summary lines ("I would bring a combination of",
+   "my background fits well", "strong fit for"). Let the work state the fit.
+6. No punchy fragments planted for drama.
+7. No corporate filler or LLM openers. Cut "I am passionate about",
+   "leverage", "hit the ground running", "drive results", "synergies".
+8. Honesty as a confidence move, not a hedge. "The model itself was the
+   smallest part of it" reads as command of the work and redirects to the
+   transferable part. Use it that way.
+9. Every claim survives an interview. Name gaps live at interview, never
+   pre-justify them on the page.
+
+## Overclaiming (hard line)
+
+Reframe emphasis, not substance. Apply the interview backtrack test: if the
+candidate would have to say "well, what I actually meant was", it is too far.
+- OK: reordering to lead with the most relevant work, natural domain synonyms,
+  emphasising one aspect of a broad role.
+- Never: claiming experience not held, implying industry work that was
+  academic, naming a tool or platform not actually used (e.g. do not claim
+  Vertex AI or Azure AI; OpenAI via Codex is real and may be named).
+Established precedents that stay enforced: CFD/ANSYS are minor rusty MSc work,
+not selling points. FastAPI/PostgreSQL ownership claims that were a
+collaborator's work stay out. No fabricated bullets (IMO officials, external
+client presentations). Check the master profile and prior files rather than
+inventing details.
+
+## Cover letter (Hook, Proof, Range, Close)
+
+Four paragraphs, prose, one page. No bullets. No subheadings. See
+`06-cover-letter-templates.md` and `cover_letters/cover_template.tex` for the
+worked exemplar.
+
+1. HOOK. Open on a concrete thing that actually happened, chosen because it
+   maps onto the role's core problem. Never "I am applying for", never an
+   abstraction about the role.
+2. PROOF. Speak to the role's central function in plain prose. Name the actual
+   work. Show the all-in-one value, that the candidate runs a thing and builds,
+   documents, and measures it.
+3. RANGE plus MOTIVATION. State the multi-country, multi-discipline path as
+   range, never as apology for the degree. Then why this employer, honest and
+   specific to their actual situation, not a generic mission line.
+4. CLOSE. Location, availability, openness. Short. Currently in the Copenhagen
+   area, available to start now, ready to relocate immediately for the right
+   role.
+
+Match the language of the posting. Address a named person if the posting gives
+one, otherwise "Dear Hiring Team". Any mention of AI tooling names the tools
+actually used (Claude Code, Codex, GitHub Copilot).
+
+## CV style
+
+- All text black. Hyperlinks navy, behind words, never bare URLs.
+- Concise verb-led single-line bullets. Action, then method, then result, then
+  relevance to the target role. Ownership verbs.
+- Lead with adoption and ownership signals. The strongest is that the camera
+  systems became the standard imaging infrastructure at CoaST, replacing manual
+  inspection. Signals that work was trusted, adopted, and ran reliably beat
+  descriptions of what a system does.
+- Skills as single `\mbox` lines per category so they survive ATS parsing.
+- Profile must not duplicate facts from the experience section.
+- Publications grouped peer reviewed, then submitted and in preparation.
+- No phone number. No gaps section (handled live at interview).
+- English listed as Native, never Fluent. Danish as Actively learning.
+- ML and image processing stay visible on every CV regardless of the lead.
+- Education dates (canonical): PhD DTU 2023 to 2026, MSc EJUST 2020 to 2023,
+  BSc KNUST 2014 to 2018.
+- Two pages for substantive roles, one page for junior or software developer
+  roles. Education leads experience where the degree is the primary filter.
 
 ## Tone
-- **Warm but direct.** Friendly and approachable, but confident without arrogance.
-- **Conversational professional.** Not stiff corporate-speak, not casual chat. Think: how a confident person talks in a good job interview.
-- **First person, active voice.** "I built" not "a system was developed by the candidate."
-- **Demonstrate, don't state.** Instead of "I am a team player", write a specific example of teamwork and its outcome.
 
-## Application Headline (Best Practice)
-
-The subject line / headline of the application should be engaging and specific, not generic.
-
-**Bad:** "Application for Sales Engineer Position" / "Ansogning til stilling som ingeniør"
-**Good:** "[Your specialty] specializing in [relevant keyword from posting]"
-
-Formula: **[Title/education] + [relevant keyword from the job posting]**
-
-## Scannable Structure (Best Practice)
-
-Employers scan applications quickly. Structure for easy reading:
-- Use descriptive subheadings that reflect content (not just "Introduction" / "Body")
-- Include industry-specific keywords in headings where natural
-- Write concisely - eliminate filler language
-- One page maximum (hard rule)
-
-## Forward-Looking Framing (Best Practice)
-
-The cover letter is **not a CV repetition**. It should be forward-looking:
-- Focus on **tasks you can solve for the employer**, not just what you've done before
-- Describe your approach: methods, tools, knowledge you'll bring
-- Explain what positive outcomes the employer can expect from hiring you
-- Use 1-2 brief past examples only to back up forward-looking claims
-
-## Cover Letter Structure
-
-### Opening Paragraph
-- State the role and why you're writing (1 sentence)
-- Immediately connect your background to the role (1-2 sentences)
-- Make it specific to this company/role, not a template opener
-
-### Body Paragraphs - Task-Solving Focus
-- Lead with the most relevant experience for this specific role
-- Frame content around **which of their tasks you can solve and how**
-- Describe your approach: methods, tools, and knowledge you'll bring
-- Use bullet lists for concrete skills/achievements when appropriate (3-5 bullets)
-- Each bullet should be specific and outcome-oriented
-- Include at least one example that shows initiative
-- Include 1-2 brief examples of past success, but keep the focus forward-looking
-
-### Motivation / Why This Company (place early)
-- The **first section** after the opening should explain why you're applying to *this specific company*
-- Use language and themes from the job posting and company website
-- Focus on how you'll contribute to their goals, not what you gain from employment
-- If you spoke with someone at the company, reference the conversation naturally
-
-### Company-Specific Paragraph
-- Show you've researched the company (mention specific projects, values, or market position)
-- Explain why this company specifically, not just "a company like yours"
-- Connect domain knowledge to their business context
-
-### Closing
-- Brief, confident, forward-looking
-- "I look forward to hearing from you" or "I would welcome the opportunity to discuss..."
-- No begging or over-enthusiasm
-
-## Bullet Point Style
-- Start with action verb or bold category label
-- Be specific: numbers, tools, outcomes
-- Vary the structure (not every bullet starts the same way)
-
-## Language for Different Role Types
-
-### Technical/ML roles
-- Lead with programming languages, ML frameworks, specific model architectures
-- Mention datasets, data volumes, pipeline complexity
-- Include independent projects
-
-### Domain-specific roles
-- Lead with domain expertise and specific methods
-- Frame technical skills as tools that enhance domain analysis
-
-### Consulting/Advisory roles
-- Lead with stakeholder communication, project coordination, client interaction
-- Emphasize ability to bridge technical and business perspectives
-
-### Leadership/Senior roles
-- Lead with project management, mentoring, course development
-- Frame advanced degrees as evidence of independent project delivery
-
-## Multi-language Applications
-- Default to the language of the job posting
-- Cover letters in the posting's language should feel natural, not translated
-- Slightly warmer, more personal tone may be acceptable in some languages
+Warm but direct. Confident without cockiness, which is what Danish hiring
+rewards. First person, active voice. Demonstrate, do not state.

@@ -67,3 +67,7 @@ upskill/*.md
 
 # Agent usage logs
 .agents/
+# My real working files stay local; the public repo ships .example versions
+CLAUDE.md
+.claude/skills/job-application-assistant/01-candidate-profile.md
+.claude/skills/job-application-assistant/04-job-evaluation.md
